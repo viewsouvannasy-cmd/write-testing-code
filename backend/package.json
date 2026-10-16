@@ -7,7 +7,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "vitest",
     "start": "node dist/index.js",
     "dev": "nodemon --exec tsx src/index.ts"
   },
@@ -17,10 +17,13 @@
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^26.6.5",
+    "@types/supertest": "^7.2.1",
+    "@typescript/native": "npm:typescript@^7.0.2",
     "jest": "^30.5.2",
     "nodemon": "^3.1.14",
     "supertest": "^7.3.1",
     "tsx": "^4.23.15",
-    "typescript": "^7.0.2"
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "vitest": "^5.0.5"
   }
 }
