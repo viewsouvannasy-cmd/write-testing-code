@@ -19,8 +19,9 @@ export function Home() {
     }
   }
   return (
-    <div>
-      <div className="flex gap-2 p-4">
+    <div className="gap-2 p-4 flex flex-col">
+      <h1 className="text-3xl font-semibold ">Unit Test</h1>
+      <div className="flex gap-2">
         <input
           className="border px-2 py-1"
           placeholder="example 10, 20, 30"
@@ -31,8 +32,8 @@ export function Home() {
           average
         </button>
       </div>
-      {isError.length === 0 && <p className="p-4">this Average: {results}</p>}
-      {isError.length > 0 && <p className="p-4 text-red-600">{isError}</p>}
+      {isError.length === 0 && <p className="">this Average: {results}</p>}
+      {isError.length > 0 && <p className=" text-red-600">{isError}</p>}
     </div>
   );
 }
