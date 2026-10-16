@@ -16,8 +16,12 @@ describe("test average function", () => {
     expect(average([0])).toBe(0);
   });
 
-  it("throw error as vaue of [2, NaN , 3]", () => {
+  it("throw error as velue of [2, NaN , 3]", () => {
     const text = [1, "sd", 3].map((item) => Number(item));
     expect(() => average(text)).toThrow("Not implemented this value");
+  });
+
+  it("it throw error when average as []", () => {
+    expect(() => average([])).toThrow("Not implemented this value");
   });
 });
