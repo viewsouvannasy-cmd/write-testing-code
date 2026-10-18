@@ -1,0 +1,7 @@
+{
+  "language": "en",
+  "greeting": "Hello everyone",
+  "name": "My name is {{name}}",
+  "age": "I'm {{age}} year old",
+  "job": "I'm a {{job}}"
+}
