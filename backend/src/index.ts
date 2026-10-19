@@ -47,6 +47,23 @@ app.post("/login", async (req: Request, res: Response) => {
   }
 });
 
+
+app.post('/create' , (req:Request<{}, {}, {name: string, color: string}> , res:Response) => {
+  try {
+    const {name , color} = req.body 
+
+    if (!name || !color) {
+      return res.status(401).json({ok: false , msg: "Please Provide All Required"})
+    }
+
+
+    res.status(200).json({ok: true, msg: "Create Successs"})
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ok: false, msg: "Internal server error"})
+  }
+});
+
 app.listen(4000, () => {
   console.log("server run on port 4000");
 });

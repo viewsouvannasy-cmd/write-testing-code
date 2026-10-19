@@ -72,3 +72,33 @@ describe("POST /login", () => {
     });
   });
 });
+
+
+describe("POST /create", () => {
+  it("Response Error When Pass", async () => {
+    const res = await request(app).post("/create").send({
+      name: "",
+      color: "",
+    });
+
+    expect(res.statusCode).toBe(401)
+    expect(res.body).toEqual({
+      ok: false,
+      msg: "Please Provide All Required"
+    })
+  })
+
+
+  it("Response Success When Have All Required ",async () => {
+    const res = await request(app).post("/create").send({
+      name: "View",
+      color: "Blue",
+    });
+
+    expect(res.statusCode).toBe(200)
+    expect(res.body).toEqual({
+      ok: true, msg: "Create Successs"
+    })
+  })
+})
+
