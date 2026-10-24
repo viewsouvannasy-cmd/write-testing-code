@@ -8,6 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: frontend
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
@@ -18,7 +22,7 @@ jobs:
           node-version: 24
 
       - name: Install dependince
-        run: cd frontend npm install
+        run: npm install
 
       - name: Run test
-        run: cd frontend npm run test
+        run: npm run test
