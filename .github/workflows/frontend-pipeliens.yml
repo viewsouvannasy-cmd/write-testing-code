@@ -18,7 +18,7 @@ jobs:
           node-version: 24
 
       - name: Install dependince
-        run: npm install
+        run: cd frontend npm install
 
       - name: Run test
-        run: npm run test
+        run: cd frontend npm run test
